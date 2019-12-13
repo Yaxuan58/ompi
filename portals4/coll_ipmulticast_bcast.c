@@ -347,8 +347,7 @@ int ompi_coll_ipmulticast_bcast(void *buff, int count,
     get_IP_Addr("eth0",msg.ip);
     int chunk_size = request.chunk_size;
 
-    //TODO bmap
-    unsigned int bmap, flag = 1, full_bmap = (1 << NUM_PKT) - 1;
+    //TODO 
     unsigned int len;
 
 	// If we're not sending, get ready to receive
@@ -420,6 +419,8 @@ int ompi_coll_ipmulticast_bcast(void *buff, int count,
                     perror("Rank-Send: sendto()");
                 }
                 // TODO
+
+
             }
 
             ranks_left = ranks - 1;
